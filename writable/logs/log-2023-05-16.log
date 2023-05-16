@@ -1,0 +1,18 @@
+CRITICAL - 2023-05-16 07:18:59 --> view(): Argument #2 ($data) must be of type array, string given, called in C:\xampp\htdocs\CI_Ejemplo\app\Controllers\Home.php on line 10
+in SYSTEMPATH\Common.php on line 1172.
+ 1 APPPATH\Controllers\Home.php(10): view('welcome_message', 'Yisus')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 07:21:43 --> Undefined variable $nombre
+in APPPATH\Views\welcome_message.php on line 224.
+ 1 APPPATH\Views\welcome_message.php(224): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nombre', 'C:\\xampp\\htdocs\\CI_Ejemplo\\app\\Views\\welcome_message.php', 224)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\CI_Ejemplo\\app\\Views\\welcome_message.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH\Controllers\Home.php(10): view('welcome_message', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
