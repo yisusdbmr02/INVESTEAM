@@ -33,6 +33,11 @@ $routes->set404Override();
 $routes->get('/', 'EjController::index');
 $routes->get('/ejcontroller', 'EjController::index');
 
+$routes->get('/investigadorescontroller', 'InvestigadoresController::index');
+$routes->post('/investigadorescontroller', 'InvestigadoresController::index');
+
+$routes->get('/investigadorescontroller/add', 'InvestigadoresController::index');
+$routes->post('/investigadorescontroller/add', 'InvestigadoresController::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
