@@ -36,8 +36,11 @@ $routes->get('/ejcontroller', 'EjController::index');
 $routes->get('/investigadorescontroller', 'InvestigadoresController::index');
 $routes->post('/investigadorescontroller', 'InvestigadoresController::index');
 
-$routes->get('/investigadorescontroller/add', 'InvestigadoresController::index');
-$routes->post('/investigadorescontroller/add', 'InvestigadoresController::index');
+$routes->get('/investigadorescontroller/add', 'InvestigadoresController::add');
+$routes->post('/investigadorescontroller/add', 'InvestigadoresController::add');
+
+$routes->get('/investigadorescontroller/list', 'InvestigadoresController::list');
+$routes->post('/investigadorescontroller/list', 'InvestigadoresController::list');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
