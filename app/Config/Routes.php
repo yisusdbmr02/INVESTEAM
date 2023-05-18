@@ -30,8 +30,8 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 //$routes->get('/', 'Home::index');
-$routes->get('/', 'EjController::index');
-$routes->get('/ejcontroller', 'EjController::index');
+$routes->get('/', 'InicioController::index');
+$routes->get('/iniciocontroller', 'InicioController::index');
 
 $routes->get('/investigadorescontroller', 'InvestigadoresController::index');
 $routes->post('/investigadorescontroller', 'InvestigadoresController::index');
@@ -41,6 +41,24 @@ $routes->post('/investigadorescontroller/add', 'InvestigadoresController::add');
 
 $routes->get('/investigadorescontroller/list', 'InvestigadoresController::list');
 $routes->post('/investigadorescontroller/list', 'InvestigadoresController::list');
+
+$routes->get('/equiposcontroller', 'EquiposController::index');
+$routes->post('/equiposcontroller', 'EquiposController::index');
+
+$routes->get('/equiposcontroller/list', 'EquiposController::list');
+$routes->post('/equiposcontroller/list', 'EquiposController::list');
+
+$routes->get('/facultadcontroller', 'FacultadController::index');
+$routes->post('/facultadcontroller', 'FacultadController::index');
+
+$routes->get('/facultadcontroller/list', 'FacultadController::list');
+$routes->post('/facultadcontroller/list', 'FacultadController::list');
+
+$routes->get('/reservascontroller', 'ReservasController::index');
+$routes->post('/reservascontroller', 'ReservasController::index');
+
+$routes->get('/reservascontroller/list', 'ReservasController::list');
+$routes->post('/reservascontroller/list', 'ReservasController::list');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

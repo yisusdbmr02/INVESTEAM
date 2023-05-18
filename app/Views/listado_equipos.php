@@ -5,10 +5,9 @@
         <table class="table table-striped table-bordered ">
         <thead>
             <tr>
-                <th>DNI</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Facultad</th>
+                <th>IdEquipo</th>
+                <th>IdFacultad</th>
+                <th>Descripcion</th>
                 <th></th>
             </tr>
         </thead>
@@ -17,10 +16,9 @@
         if(count($list) > 0){
         foreach($list as $row): ?> 
             <tr>
-                <td><?=$row->DNI?></td>
-                <td><?=$row->NomInvestigador?></td>
-                <td><?=$row->ApellInvestigador?></td>
-                <td><?=$row->IdFacultad?></td>
+                <td><?=$row->IdEquipo?></td>
+                <td><?=$row->Idfacultad?></td>
+                <td><?=$row->Descripcion?></td>
                 <td><a class="btn" href=""><i class="fas fa-edit"></i></a>&nbsp;<a class="btn" href=""><i class="fas fa-trash"></i></a></td>
             </tr>
             <?php endforeach;
