@@ -34,6 +34,12 @@ class FacultadController extends BaseController{
         echo view('listado_facultad', $this->data);
         echo view('estructure/footer');
     }
+    public function add(){
+        $this->data['page_title'] = "Añadir Facultad";
+        echo view('estructure/header', $this->data);
+        echo view('add_facultad', $this->data);
+        echo view('estructure/footer');
+    }
     // Create Form Page
     /*public function create(){
         $this->data['page_title'] = "Add New";

@@ -30,7 +30,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="<?=base_url()?>index.php/investigadorescontroller/list">Listado</a>
                             <hr>
-                            <a class="dropdown-item" href="#">Añadir</a>
+                            <a class="dropdown-item" href="<?=base_url()?>index.php/investigadorescontroller/add">Añadir</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -38,7 +38,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="<?=base_url()?>index.php/equiposcontroller/list">Listado</a>
                             <hr>
-                            <a class="dropdown-item" href="#">Añadir</a>
+                            <a class="dropdown-item" href="<?=base_url()?>index.php/equiposcontroller/add">Añadir</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -46,7 +46,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="<?=base_url()?>index.php/facultadcontroller/list">Listado</a>
                             <hr>
-                            <a class="dropdown-item" href="#">Añadir</a>
+                            <a class="dropdown-item" href="<?=base_url()?>index.php/facultadcontroller/add">Añadir</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -54,7 +54,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="<?=base_url()?>index.php/reservascontroller/list">Listado</a>
                             <hr>
-                            <a class="dropdown-item" href="#">Añadir</a>
+                            <a class="dropdown-item" href="<?=base_url()?>index.php/reservascontroller/add">Añadir</a>
                         </div>
                     </li>
                     <li class="nav-item active">

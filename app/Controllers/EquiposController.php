@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\CrudEquipos;
+use App\Models\CrudFacultad;
 
 class EquiposController extends BaseController{
     // Session
@@ -32,6 +33,17 @@ class EquiposController extends BaseController{
         $this->data['list'] = $this->crud_eq->orderBy('IdEquipo ASC')->select('*')->get()->getResult();
         echo view('estructure/header');
         echo view('listado_equipos', $this->data);
+        echo view('estructure/footer');
+    }
+    public function add(){
+        $this->data['page_title'] = "Añadir Equipo";
+        $this->crud_facu= new CrudFacultad();
+        $this->data['lista_facultades'] = $this->crud_facu->orderBy('NomFacultad ASC')->select('*')->get()->getResult();
+        $this->crud_eq= new CrudEquipos();
+        $this->data['lista_equipos'] = $this->crud_eq->orderBy('IdEquipo ASC')->select('*')->get()->getResult();
+        $this->data['request'] = $this->request;
+        echo view('estructure/header', $this->data);
+        echo view('add_equipos', $this->data);
         echo view('estructure/footer');
     }
     // Create Form Page

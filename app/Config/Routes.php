@@ -45,17 +45,26 @@ $routes->post('/investigadorescontroller/list', 'InvestigadoresController::list'
 $routes->get('/equiposcontroller', 'EquiposController::index');
 $routes->post('/equiposcontroller', 'EquiposController::index');
 
+$routes->get('/equiposcontroller/add', 'EquiposController::add');
+$routes->post('/equiposcontroller/add', 'EquiposController::add');
+
 $routes->get('/equiposcontroller/list', 'EquiposController::list');
 $routes->post('/equiposcontroller/list', 'EquiposController::list');
 
 $routes->get('/facultadcontroller', 'FacultadController::index');
 $routes->post('/facultadcontroller', 'FacultadController::index');
 
+$routes->get('/facultadcontroller/add', 'FacultadController::add');
+$routes->post('/facultadcontroller/add', 'FacultadController::add');
+
 $routes->get('/facultadcontroller/list', 'FacultadController::list');
 $routes->post('/facultadcontroller/list', 'FacultadController::list');
 
 $routes->get('/reservascontroller', 'ReservasController::index');
 $routes->post('/reservascontroller', 'ReservasController::index');
+
+$routes->get('/reservascontroller/add', 'ReservasController::add');
+$routes->post('/reservascontroller/add', 'ReservasController::add');
 
 $routes->get('/reservascontroller/list', 'ReservasController::list');
 $routes->post('/reservascontroller/list', 'ReservasController::list');

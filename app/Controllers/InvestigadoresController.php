@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\CrudInvestigadores;
+use App\Models\CrudFacultad;
 
 class InvestigadoresController extends BaseController{
     // Session
@@ -35,14 +36,16 @@ class InvestigadoresController extends BaseController{
         echo view('estructure/footer');
     }
     // Create Form Page
-    /*public function create(){
-        $this->data['page_title'] = "Add New";
+    public function add(){
+        $this->data['page_title'] = "Añadir Investigadores";
+        $this->crud_facu= new CrudFacultad();
+        $this->data['lista_facultades'] = $this->crud_facu->orderBy('NomFacultad ASC')->select('*')->get()->getResult();
         $this->data['request'] = $this->request;
-        echo view('templates/header', $this->data);
-        echo view('crud/create', $this->data);
-        echo view('templates/footer');
+        echo view('estructure/header', $this->data);
+        echo view('add_investigadores', $this->data);
+        echo view('estructure/footer');
     }
-
+    /*
     // Insert And Update Function
     public function save(){
         $this->data['request'] = $this->request;

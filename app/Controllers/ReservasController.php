@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\CrudReservas;
+use App\Models\CrudEquipos;
 
 class ReservasController extends BaseController{
     // Session
@@ -32,6 +33,15 @@ class ReservasController extends BaseController{
         $this->data['list'] = $this->crud_res->orderBy('DNI ASC')->select('*')->get()->getResult();
         echo view('estructure/header');
         echo view('listado_reservas', $this->data);
+        echo view('estructure/footer');
+    }
+    public function add(){
+        $this->data['page_title'] = "Añadir Reservas";
+        $this->crud_eq= new CrudEquipos();
+        $this->data['lista_equipos'] = $this->crud_eq->orderBy('IdEquipo ASC')->select('*')->get()->getResult();
+        $this->data['request'] = $this->request;
+        echo view('estructure/header', $this->data);
+        echo view('add_reservas', $this->data);
         echo view('estructure/footer');
     }
     // Create Form Page
