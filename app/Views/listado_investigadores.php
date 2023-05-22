@@ -22,7 +22,7 @@
                 <td><?=$row->NomInvestigador?></td>
                 <td><?=$row->ApellInvestigador?></td>
                 <td><?=$row->IdFacultad?></td>
-                <td><a class="btn" href="<?=site_url('investigadorescontroller/edit/').$row->DNI?>"><i class="fas fa-edit"></i></a>&nbsp;<a class="btn" href="javascript:swalDelete('<?=$row->DNI?>')"><i class="fas fa-trash"></i></a></td>
+                <td><a class="btn" href="<?=site_url('investigadorescontroller/edit/').$row->DNI?>"><i class="fas fa-edit"></i></a>&nbsp;<a class="btn" href="<?php echo site_url(); ?>/investigadorescontroller/del?DNI=<?php echo $row->DNI;?>"onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')" ><i class="fas fa-trash"></i></a></td>
             </tr>
             <?php endforeach;
     }?> 

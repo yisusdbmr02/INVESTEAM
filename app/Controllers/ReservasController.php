@@ -87,4 +87,13 @@ class ReservasController extends BaseController{
         echo view('edit_reservas', $this->data);
         echo view('estructure/footer');
     }
+
+    public function del(){
+        
+        $request = \Config\Services::request();
+        $idReserva = $request->getPostGet('IdReserva');
+        $this->crud_res->delete($idReserva);
+      
+        return redirect()->to(site_url('/reservascontroller/list'));
+    }
 }

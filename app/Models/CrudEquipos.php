@@ -5,6 +5,7 @@
 
     class CrudEquipos extends Model{
         protected $table = 'equipo';
+        protected $primaryKey = 'IdEquipo';
         protected $allowedFields = ['IdEquipo','Idfacultad','Descripcion'];
     }
 ?>

@@ -5,6 +5,7 @@
 
     class CrudFacultad extends Model{
         protected $table = 'facultad';
+        protected $primaryKey = 'IdFacultad';
         protected $allowedFields = ['IdFacultad','NomFacultad'];
     }
 ?>

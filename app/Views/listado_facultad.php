@@ -17,7 +17,7 @@
             <tr>
                 <td><?=$row->IdFacultad?></td>
                 <td><?=$row->NomFacultad?></td>
-                <td><a class="btn" href="<?=site_url('facultadcontroller/edit/').$row->IdFacultad?>"><i class="fas fa-edit"></i></a>&nbsp;<a class="btn" href="javascript:swalDelete('<?=$row->IdFacultad?>')"><i class="fas fa-trash"></i></a></td>
+                <td><a class="btn" href="<?=site_url('facultadcontroller/edit/').$row->IdFacultad?>"><i class="fas fa-edit"></i></a>&nbsp;<a class="btn" href="<?php echo site_url(); ?>/facultadcontroller/del?idFacultad=<?php echo $row->IdFacultad;?>"onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')" ><i class="fas fa-trash"></i></a></td>
             </tr>
             <?php endforeach;
     }?> 

@@ -19,7 +19,7 @@
                 <td><?=$row->IdEquipo?></td>
                 <td><?=$row->Idfacultad?></td>
                 <td><?=$row->Descripcion?></td>
-                <td><a class="btn" href="<?=site_url('equiposcontroller/edit/').$row->IdEquipo?>"><i class="fas fa-edit"></i></a>&nbsp;<a class="btn" href="javascript:swalDelete('<?=$row->IdEquipo?>')"><i class="fas fa-trash"></i></a></td>
+                <td><a class="btn" href="<?=site_url('equiposcontroller/edit/').$row->IdEquipo?>"><i class="fas fa-edit"></i></a>&nbsp;<a class="btn" href="<?php echo site_url(); ?>/equiposcontroller/del?IdEquipo=<?php echo $row->IdEquipo;?>"onclick="return confirm('¿Estás seguro de que deseas eliminar este registro?')" ><i class="fas fa-trash"></i></a></td>
             </tr>
             <?php endforeach;
     }?> 

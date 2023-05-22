@@ -93,18 +93,15 @@ class InvestigadoresController extends BaseController{
         echo view('estructure/footer');
     }
 
-
-    // Delete Data
-    public function del(){
-        $this->data['request']= $this->request;
+     // Delete Data
+     public function del(){
         
-        $dni = $this->request->getPost('dni');
-
-        $res = $this->crud_invest->where('DNI',$dni)->delete();
-        echo 'Estoy dentro';
-
-        echo $dni;
+        $request = \Config\Services::request();
+        $dni = $request->getPostGet('DNI');
+        $this->crud_invest->delete($dni);
+        //$this->data['page_title'] = "Lista Investigadores";
+        //$this->data['list'] = $this->crud_invest->orderBy('DNI ASC')->select('*')->get()->getResult();
         return redirect()->to(site_url('/investigadorescontroller/list'));
+        //return view('estructure/header',$this->data).view('listado_investigadores',$this->data).view('estructure/footer');
     }
-   
 }

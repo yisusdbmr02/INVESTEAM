@@ -5,6 +5,7 @@
 
     class CrudReservas extends Model{
         protected $table = 'reservas';
+        protected $primaryKey = 'IdReserva';
         protected $allowedFields = ['IdReserva','DNI','IdEquipo','FechaInicio','FechaFin'];
     }
 ?>

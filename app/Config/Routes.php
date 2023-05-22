@@ -108,6 +108,18 @@ $routes->post('/reservascontroller/save', 'ReservasController::save');
 
 $routes->get('/reservascontroller/list', 'ReservasController::list');
 $routes->post('/reservascontroller/list', 'ReservasController::list');
+
+$routes->get('/equiposcontroller/del', 'EquiposController::del');
+$routes->post('/equiposcontroller/del', 'EquiposController::del');
+
+$routes->get('/facultadcontroller/del', 'FacultadController::del');
+$routes->post('/facultadcontroller/del', 'FacultadController::del');
+
+$routes->get('/reservascontroller/del', 'ReservasController::del');
+$routes->post('/reservascontroller/del', 'ReservasController::del');
+
+$routes->get('/investigadorescontroller/del', 'InvestigadoresController::del');
+$routes->post('/investigadorescontroller/del','InvestigadoresController::del');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

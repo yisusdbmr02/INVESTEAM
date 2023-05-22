@@ -4,8 +4,10 @@
     use CodeIgniter\Model;
 
     class CrudInvestigadores extends Model{
-        protected $table = 'investigadores';
-        protected $allowedFields = ['DNI','NomInvestigador','ApellInvestigador','IdFacultad'];
         
+        protected $table = 'investigadores';
+        protected $primaryKey = 'DNI';
+        protected $allowedFields = ['DNI','NomInvestigador','ApellInvestigador','IdFacultad'];
+
     }
 ?>
