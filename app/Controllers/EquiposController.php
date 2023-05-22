@@ -54,64 +54,38 @@ class EquiposController extends BaseController{
         'Idfacultad' => $this->request->getPost('facu'),
         'Descripcion' => $this->request->getPost('descripcion'),
     ];
-    //if(!empty($this->request->getPost('id')))
-      //  $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
-    //else
+  
     $save = $this->crud_eq->insert($post);
-    //if($save){
-      //  if(!empty($this->request->getPost('id')))
-        //$this->session->setFlashdata('success_message','Data has been updated successfully') ;
-        //else
-        //$this->session->setFlashdata('success_message','Data has been added successfully') ;
-        //$id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
+    
         return redirect()->to(site_url('/equiposcontroller/list'));
-    //}else{
-    //    echo view('templates/header', $this->data);
-    //    echo view('crud/create', $this->data);
-    //    echo view('templates/footer');
-    //}
+    
+}
+    // Edit Form Page
+public function edit($id=''){
+    $this->data['page_title'] = "Editar Equipo";
+    $qry=$this->crud_eq->orderBy('IdEquipo ASC')->select('*')->where(['IdEquipo'=>$id]);
+    $this->data['equipo'] = $qry->first();
+    $this->crud_facu = new CrudFacultad();
+    $this->data['lista_facultades']=$this->crud_facu->orderBy('IdFacultad ASC')->select('*')->get()->getResult();
+    $this->data['request'] = $this->request;
+    echo view('estructure/header', $this->data);
+    echo view('edit_equipos', $this->data);
+    echo view('estructure/footer');
 }
 
+// UPT Form Page
+public function upt(){
+    $this->data['request'] = $this->request;
+    $idEquipo = $this->request->getPost('ideq');
+    $post = [
+        'Descripcion' => $this->request->getPost('descripcion'),
+        'IdFacultad' => $this->request->getPost('facu'),
+    ];
    
+    $save = $this->crud_eq->where('IdEquipo',$idEquipo)->set($post)->update();
+    
+        return redirect()->to(site_url('/equiposcontroller/list'));
+    
+}
 
-    // Edit Form Page
-    /*public function edit($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $this->data['page_title'] = "Edit Contact Details";
-        $qry= $this->crud_model->select('*')->where(['id'=>$id]);
-        $this->data['data'] = $qry->first();
-        echo view('templates/header', $this->data);
-        echo view('crud/edit', $this->data);
-        echo view('templates/footer');
-    }
-
-    // Delete Data
-    public function delete($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $delete = $this->crud_model->delete($id);
-        if($delete){
-            $this->session->setFlashdata('success_message','Contact Details has been deleted successfully.') ;
-            return redirect()->to('/main/list');
-        }
-    }
-
-    // View Data
-    public function view_details($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $this->data['page_title'] = "View Contact Details";
-        $qry= $this->crud_model->select("*, CONCAT(lastname,', ',firstname,COALESCE(concat(' ', middlename), '')) as `name`")->where(['id'=>$id]);
-        $this->data['data'] = $qry->first();
-        echo view('templates/header', $this->data);
-        echo view('crud/view', $this->data);
-        echo view('templates/footer');
-    }*/
 }

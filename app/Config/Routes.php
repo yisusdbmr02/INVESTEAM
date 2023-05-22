@@ -42,8 +42,14 @@ $routes->post('/investigadorescontroller/add', 'InvestigadoresController::add');
 $routes->get('/investigadorescontroller/save', 'InvestigadoresController::save');
 $routes->post('/investigadorescontroller/save', 'InvestigadoresController::save');
 
+$routes->get('/investigadorescontroller/upt', 'InvestigadoresController::upt');
+$routes->post('/investigadorescontroller/upt', 'InvestigadoresController::upt');
+
 $routes->get('/investigadorescontroller/del', 'InvestigadoresController::del');
 $routes->post('/investigadorescontroller/del', 'InvestigadoresController::del');
+
+$routes->get('/investigadorescontroller/edit/(:any)', 'InvestigadoresController::edit/$1');
+$routes->post('/investigadorescontroller/edit/(:any)', 'InvestigadoresController::edit/$1');
 
 
 $routes->get('/investigadorescontroller/list', 'InvestigadoresController::list');
@@ -54,6 +60,12 @@ $routes->post('/equiposcontroller', 'EquiposController::index');
 
 $routes->get('/equiposcontroller/add', 'EquiposController::add');
 $routes->post('/equiposcontroller/add', 'EquiposController::add');
+
+$routes->get('/equiposcontroller/upt', 'EquiposController::upt');
+$routes->post('/equiposcontroller/upt', 'EquiposController::upt');
+
+$routes->get('/equiposcontroller/edit/(:any)', 'EquiposController::edit/$1');
+$routes->post('/equiposcontroller/edit/(:any)', 'EquiposController::edit/$1');
 
 $routes->get('/equiposcontroller/save', 'EquiposController::save');
 $routes->post('/equiposcontroller/save', 'EquiposController::save');
@@ -67,6 +79,12 @@ $routes->post('/facultadcontroller', 'FacultadController::index');
 $routes->get('/facultadcontroller/add', 'FacultadController::add');
 $routes->post('/facultadcontroller/add', 'FacultadController::add');
 
+$routes->get('/facultadcontroller/edit/(:any)', 'FacultadController::edit/$1');
+$routes->post('/facultadcontroller/edit/(:any)', 'FacultadController::edit/$1');
+
+$routes->get('/facultadcontroller/upt', 'FacultadController::upt');
+$routes->post('/facultadcontroller/upt', 'FacultadController::upt');
+
 $routes->get('/facultadcontroller/save', 'FacultadController::save');
 $routes->post('/facultadcontroller/save', 'FacultadController::save');
 
@@ -78,6 +96,12 @@ $routes->post('/reservascontroller', 'ReservasController::index');
 
 $routes->get('/reservascontroller/add', 'ReservasController::add');
 $routes->post('/reservascontroller/add', 'ReservasController::add');
+
+$routes->get('/reservascontroller/upt', 'ReservasController::upt');
+$routes->post('/reservascontroller/upt', 'ReservasController::upt');
+
+$routes->get('/reservascontroller/edit/(:any)', 'ReservasController::edit/$1');
+$routes->post('/reservascontroller/edit/(:any)', 'ReservasController::edit/$1');
 
 $routes->get('/reservascontroller/save', 'ReservasController::save');
 $routes->post('/reservascontroller/save', 'ReservasController::save');

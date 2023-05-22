@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Models\CrudReservas;
 use App\Models\CrudEquipos;
+use App\Models\CrudInvestigadores;
 
 class ReservasController extends BaseController{
     // Session
@@ -38,6 +39,8 @@ class ReservasController extends BaseController{
     // Create Form Page
     public function add(){
         $this->data['page_title'] = "Añadir Reservas";
+        $this->crud_invest= new CrudInvestigadores();
+        $this->data['lista_invest'] = $this->crud_invest->orderBy('DNI ASC')->select('*')->get()->getResult();
         $this->crud_eq= new CrudEquipos();
         $this->data['lista_equipos'] = $this->crud_eq->orderBy('IdEquipo ASC')->select('*')->get()->getResult();
         $this->data['request'] = $this->request;
@@ -54,64 +57,34 @@ class ReservasController extends BaseController{
             'FechaInicio' => $this->request->getPost('fechaIni'),
             'FechaFin' => $this->request->getPost('fechaFin'),
         ];
-        //if(!empty($this->request->getPost('id')))
-          //  $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
-        //else
         $save = $this->crud_res->insert($post);
-        //if($save){
-          //  if(!empty($this->request->getPost('id')))
-            //$this->session->setFlashdata('success_message','Data has been updated successfully') ;
-            //else
-            //$this->session->setFlashdata('success_message','Data has been added successfully') ;
-            //$id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
             return redirect()->to(site_url('/reservascontroller/list'));
-        //}else{
-        //    echo view('templates/header', $this->data);
-        //    echo view('crud/create', $this->data);
-        //    echo view('templates/footer');
-        //}
     }
 
-   
-/*
-    // Edit Form Page
-    /*public function edit($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $this->data['page_title'] = "Edit Contact Details";
-        $qry= $this->crud_model->select('*')->where(['id'=>$id]);
-        $this->data['data'] = $qry->first();
-        echo view('templates/header', $this->data);
-        echo view('crud/edit', $this->data);
-        echo view('templates/footer');
+    public function upt(){
+        $this->data['request'] = $this->request;
+        $idres = $this->request->getPost('idres');
+        $post = [
+            'DNI' => $this->request->getPost('dni'),
+            'IdEquipo' => $this->request->getPost('ideq'),
+            'FechaInicio' => $this->request->getPost('fechaIni'),
+            'FechaFin' => $this->request->getPost('fechaFin')
+        ];
+        $save = $this->crud_res->where('IdReserva',$idres)->set($post)->update();
+            return redirect()->to(site_url('/reservascontroller/list'));
     }
 
-    // Delete Data
-    public function delete($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $delete = $this->crud_model->delete($id);
-        if($delete){
-            $this->session->setFlashdata('success_message','Contact Details has been deleted successfully.') ;
-            return redirect()->to('/main/list');
-        }
+    public function edit($id=''){
+        $this->data['page_title'] = "Editar Reserva";
+        $qry=$this->crud_res->orderBy('IdReserva ASC')->select('*')->where(['IdReserva'=>$id]);
+        $this->data['reserva'] = $qry->first();
+        $this->crud_eq = new CrudEquipos();
+        $this->data['lista_equipos']=$this->crud_eq->orderBy('IdEquipo ASC')->select('*')->get()->getResult();
+        $this->crud_invest = new CrudInvestigadores();
+        $this->data['lista_investigadores']=$this->crud_invest->orderBy('DNI ASC')->select('*')->get()->getResult();
+        $this->data['request'] = $this->request;
+        echo view('estructure/header', $this->data);
+        echo view('edit_reservas', $this->data);
+        echo view('estructure/footer');
     }
-
-    // View Data
-    public function view_details($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $this->data['page_title'] = "View Contact Details";
-        $qry= $this->crud_model->select("*, CONCAT(lastname,', ',firstname,COALESCE(concat(' ', middlename), '')) as `name`")->where(['id'=>$id]);
-        $this->data['data'] = $qry->first();
-        echo view('templates/header', $this->data);
-        echo view('crud/view', $this->data);
-        echo view('templates/footer');
-    }*/
 }

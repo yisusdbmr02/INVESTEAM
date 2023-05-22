@@ -41,71 +41,43 @@ class FacultadController extends BaseController{
         echo view('add_facultad', $this->data);
         echo view('estructure/footer');
     }
-
-    // Insert And Update Function
+// UPT Form Page
+public function upt(){
+    $this->data['request'] = $this->request;
+    $id = $this->request->getPost('id');
+    $post = [
+        'NomFacultad' => $this->request->getPost('nombre')
+    ];
+    
+   
+    $save = $this->crud_facu->where('IdFacultad',$id)->set($post)->update();
+   
+    return redirect()->to(site_url('/facultadcontroller/list'));
+   
+}
+    // Insert Function
     public function save(){
         $this->data['request'] = $this->request;
         $post = [
             'NomFacultad' => $this->request->getPost('nombre'),
         ];
-        //if(!empty($this->request->getPost('id')))
-          //  $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
-        //else
+     
         $save = $this->crud_facu->insert($post);
-        //if($save){
-          //  if(!empty($this->request->getPost('id')))
-            //$this->session->setFlashdata('success_message','Data has been updated successfully') ;
-            //else
-            //$this->session->setFlashdata('success_message','Data has been added successfully') ;
-            //$id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
-            return redirect()->to(site_url('/facultadcontroller/list'));
-        //}else{
-        //    echo view('templates/header', $this->data);
-        //    echo view('crud/create', $this->data);
-        //    echo view('templates/footer');
-        //}
-    }
-
    
-
-    // Edit Form Page
-    /*public function edit($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $this->data['page_title'] = "Edit Contact Details";
-        $qry= $this->crud_model->select('*')->where(['id'=>$id]);
-        $this->data['data'] = $qry->first();
-        echo view('templates/header', $this->data);
-        echo view('crud/edit', $this->data);
-        echo view('templates/footer');
+            return redirect()->to(site_url('/facultadcontroller/list'));
+    
     }
 
-    // Delete Data
-    public function delete($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $delete = $this->crud_model->delete($id);
-        if($delete){
-            $this->session->setFlashdata('success_message','Contact Details has been deleted successfully.') ;
-            return redirect()->to('/main/list');
-        }
+     // Edit Form Page
+     public function edit($id=''){
+        $this->data['page_title'] = "Editar Facultad";
+        $qry=$this->crud_facu->orderBy('IdFacultad ASC')->select('*')->where(['IdFacultad'=>$id]);
+        $this->data['facultad'] = $qry->first();
+        $this->data['lista_facultades']=$this->crud_facu->orderBy('IdFacultad ASC')->select('*')->get()->getResult();
+        $this->data['request'] = $this->request;
+        echo view('estructure/header', $this->data);
+        echo view('edit_facultad', $this->data);
+        echo view('estructure/footer');
     }
-
-    // View Data
-    public function view_details($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $this->data['page_title'] = "View Contact Details";
-        $qry= $this->crud_model->select("*, CONCAT(lastname,', ',firstname,COALESCE(concat(' ', middlename), '')) as `name`")->where(['id'=>$id]);
-        $this->data['data'] = $qry->first();
-        echo view('templates/header', $this->data);
-        echo view('crud/view', $this->data);
-        echo view('templates/footer');
-    }*/
+  
 }

@@ -1,16 +1,18 @@
 <br>
 <div class="row d-flex justify-content-center">
    
-<form action="<?=base_url()?>index.php/reservascontroller/save" class="w-50 border rounded bg-warning text-center p-3" method="post">
+<form action="<?=base_url()?>index.php/reservascontroller/upt" class="w-50 border rounded bg-warning text-center p-3" method="post">
 <h1><?=$page_title?></h1>
+<input type="hidden" value="<?=$reserva['IdReserva']?>" name="idres">
 <div class="row my-2">
     <div class="col">
         <label for="dni">DNI:</label>
-        <select name="ideq" required id="ideq">
+        <select name="dni" required id="dni">
         <option value="">Todos los Investigadores</option>
-        <?php if(count($lista_invest) > 0){
-            foreach($lista_invest as $row): ?> 
-            <option value="<?=$row->DNI?>"><?=$row->NomInvestigador?></option>
+        <?php if(count($lista_investigadores) > 0){
+            foreach($lista_investigadores as $row): 
+                $sele=($reserva['DNI']==$row->DNI)?'selected':''?>  ?> ?> 
+            <option value="<?=$row->DNI?>" <?=$sele?>><?=$row->NomInvestigador?></option>
             <?php endforeach;
             }?> 
         </select>
@@ -23,8 +25,9 @@
         <option value="">Todos los Equipos</option>
             <?php
             if(count($lista_equipos) > 0){
-            foreach($lista_equipos as $row): ?> 
-            <option value="<?=$row->IdEquipo?>"><?=$row->IdEquipo?></option>
+            foreach($lista_equipos as $row):
+                $sele=($reserva['IdEquipo']==$row->IdEquipo)?'selected':''?>  ?> 
+            <option value="<?=$row->IdEquipo?>" <?=$sele?>><?=$row->IdEquipo?></option>
             <?php endforeach;
             }?> 
         </select>
@@ -33,13 +36,13 @@
 <div class="row my-2">
     <div class="col">
         <label for="fechaIni">Fecha Inicio:</label>
-        <input required type="datetime-local" name="fechaIni" id="fechaIni">
+        <input required value="<?=$reserva['FechaInicio']?>" type="datetime-local" name="fechaIni" id="fechaIni">
     </div>
 </div>
 <div class="row my-2">
     <div class="col">
         <label for="fechaFin">Fecha Fin:</label>
-        <input requierd type="datetime-local" name="fechaFin" id="fechaFin">
+        <input requierd  value="<?=$reserva['FechaFin']?>" type="datetime-local" name="fechaFin" id="fechaFin">
     </div>
 </div>
 <div class="row d-flex justify-content-center">

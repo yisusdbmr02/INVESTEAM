@@ -23,7 +23,7 @@
                 <td><?=$row->IdEquipo?></td>
                 <td><?=$row->FechaInicio?></td>
                 <td><?=$row->FechaFin?></td>
-                <td><a class="btn" href=""><i class="fas fa-edit"></i></a>&nbsp;<a class="btn" href="javascript:swalDelete('<?=$row->IdReserva?>')"><i class="fas fa-trash"></i></a></td>
+                <td><a class="btn" href="<?=site_url('reservascontroller/edit/').$row->IdReserva?>"><i class="fas fa-edit"></i></a>&nbsp;<a class="btn" href="javascript:swalDelete('<?=$row->IdReserva?>')"><i class="fas fa-trash"></i></a></td>
             </tr>
             <?php endforeach;
     }?> 
