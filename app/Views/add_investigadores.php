@@ -1,7 +1,7 @@
 <br>
 <div class="row d-flex justify-content-center">
    
-<form action="" class="w-50 border rounded bg-warning text-center p-3" method="post">
+<form action="<?=base_url()?>index.php/investigadorescontroller/save" class="w-50 border rounded bg-warning text-center p-3" method="post">
 <h1><?=$page_title?></h1>
 <div class="row my-2">
     <div class="col">
@@ -25,7 +25,7 @@
 
     <div class="col">
         <label for="facu">Facultad:</label>
-        <select name="facuInvest" id="facu">
+        <select name="facu" id="facu">
         <option value="">Todas las facultades</option>
             <?php
             if(count($lista_facultades) > 0){

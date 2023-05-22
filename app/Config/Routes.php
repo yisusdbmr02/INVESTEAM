@@ -39,6 +39,13 @@ $routes->post('/investigadorescontroller', 'InvestigadoresController::index');
 $routes->get('/investigadorescontroller/add', 'InvestigadoresController::add');
 $routes->post('/investigadorescontroller/add', 'InvestigadoresController::add');
 
+$routes->get('/investigadorescontroller/save', 'InvestigadoresController::save');
+$routes->post('/investigadorescontroller/save', 'InvestigadoresController::save');
+
+$routes->get('/investigadorescontroller/del', 'InvestigadoresController::del');
+$routes->post('/investigadorescontroller/del', 'InvestigadoresController::del');
+
+
 $routes->get('/investigadorescontroller/list', 'InvestigadoresController::list');
 $routes->post('/investigadorescontroller/list', 'InvestigadoresController::list');
 
@@ -47,6 +54,9 @@ $routes->post('/equiposcontroller', 'EquiposController::index');
 
 $routes->get('/equiposcontroller/add', 'EquiposController::add');
 $routes->post('/equiposcontroller/add', 'EquiposController::add');
+
+$routes->get('/equiposcontroller/save', 'EquiposController::save');
+$routes->post('/equiposcontroller/save', 'EquiposController::save');
 
 $routes->get('/equiposcontroller/list', 'EquiposController::list');
 $routes->post('/equiposcontroller/list', 'EquiposController::list');
@@ -57,6 +67,9 @@ $routes->post('/facultadcontroller', 'FacultadController::index');
 $routes->get('/facultadcontroller/add', 'FacultadController::add');
 $routes->post('/facultadcontroller/add', 'FacultadController::add');
 
+$routes->get('/facultadcontroller/save', 'FacultadController::save');
+$routes->post('/facultadcontroller/save', 'FacultadController::save');
+
 $routes->get('/facultadcontroller/list', 'FacultadController::list');
 $routes->post('/facultadcontroller/list', 'FacultadController::list');
 
@@ -65,6 +78,9 @@ $routes->post('/reservascontroller', 'ReservasController::index');
 
 $routes->get('/reservascontroller/add', 'ReservasController::add');
 $routes->post('/reservascontroller/add', 'ReservasController::add');
+
+$routes->get('/reservascontroller/save', 'ReservasController::save');
+$routes->post('/reservascontroller/save', 'ReservasController::save');
 
 $routes->get('/reservascontroller/list', 'ReservasController::list');
 $routes->post('/reservascontroller/list', 'ReservasController::list');

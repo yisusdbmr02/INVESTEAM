@@ -35,55 +35,42 @@ class EquiposController extends BaseController{
         echo view('listado_equipos', $this->data);
         echo view('estructure/footer');
     }
+    // Create Form Page
     public function add(){
         $this->data['page_title'] = "Añadir Equipo";
         $this->crud_facu= new CrudFacultad();
         $this->data['lista_facultades'] = $this->crud_facu->orderBy('NomFacultad ASC')->select('*')->get()->getResult();
-        $this->crud_eq= new CrudEquipos();
-        $this->data['lista_equipos'] = $this->crud_eq->orderBy('IdEquipo ASC')->select('*')->get()->getResult();
         $this->data['request'] = $this->request;
         echo view('estructure/header', $this->data);
         echo view('add_equipos', $this->data);
         echo view('estructure/footer');
     }
-    // Create Form Page
-    /*public function create(){
-        $this->data['page_title'] = "Add New";
-        $this->data['request'] = $this->request;
-        echo view('templates/header', $this->data);
-        echo view('crud/create', $this->data);
-        echo view('templates/footer');
-    }
-
-    // Insert And Update Function
-    public function save(){
-        $this->data['request'] = $this->request;
-        $post = [
-            'firstname' => $this->request->getPost('firstname'),
-            'middlename' => $this->request->getPost('middlename'),
-            'lastname' => $this->request->getPost('lastname'),
-            'gender' => $this->request->getPost('gender'),
-            'contact' => $this->request->getPost('contact'),
-            'email' => $this->request->getPost('email'),
-            'address' => $this->request->getPost('address')
-        ];
-        if(!empty($this->request->getPost('id')))
-            $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
-        else
-            $save = $this->crud_model->insert($post);
-        if($save){
-            if(!empty($this->request->getPost('id')))
-            $this->session->setFlashdata('success_message','Data has been updated successfully') ;
-            else
-            $this->session->setFlashdata('success_message','Data has been added successfully') ;
-            $id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
-            return redirect()->to('/main/view_details/'.$id);
-        }else{
-            echo view('templates/header', $this->data);
-            echo view('crud/create', $this->data);
-            echo view('templates/footer');
-        }
-    }*/
+    
+   // Insert And Update Function
+   public function save(){
+    $this->data['request'] = $this->request;
+    $post = [
+        'IdEquipo' => $this->request->getPost('ideq'),
+        'Idfacultad' => $this->request->getPost('facu'),
+        'Descripcion' => $this->request->getPost('descripcion'),
+    ];
+    //if(!empty($this->request->getPost('id')))
+      //  $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
+    //else
+    $save = $this->crud_eq->insert($post);
+    //if($save){
+      //  if(!empty($this->request->getPost('id')))
+        //$this->session->setFlashdata('success_message','Data has been updated successfully') ;
+        //else
+        //$this->session->setFlashdata('success_message','Data has been added successfully') ;
+        //$id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
+        return redirect()->to(site_url('/equiposcontroller/list'));
+    //}else{
+    //    echo view('templates/header', $this->data);
+    //    echo view('crud/create', $this->data);
+    //    echo view('templates/footer');
+    //}
+}
 
    
 

@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Models\CrudInvestigadores;
 use App\Models\CrudFacultad;
+use App\Config\Security;
 
 class InvestigadoresController extends BaseController{
     // Session
@@ -45,39 +46,36 @@ class InvestigadoresController extends BaseController{
         echo view('add_investigadores', $this->data);
         echo view('estructure/footer');
     }
-    /*
+    
     // Insert And Update Function
     public function save(){
         $this->data['request'] = $this->request;
         $post = [
-            'firstname' => $this->request->getPost('firstname'),
-            'middlename' => $this->request->getPost('middlename'),
-            'lastname' => $this->request->getPost('lastname'),
-            'gender' => $this->request->getPost('gender'),
-            'contact' => $this->request->getPost('contact'),
-            'email' => $this->request->getPost('email'),
-            'address' => $this->request->getPost('address')
+            'DNI' => $this->request->getPost('dni'),
+            'NomInvestigador' => $this->request->getPost('nombre'),
+            'ApellInvestigador' => $this->request->getPost('apellidos'),
+            'IdFacultad' => $this->request->getPost('facu'),
         ];
-        if(!empty($this->request->getPost('id')))
-            $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
-        else
-            $save = $this->crud_model->insert($post);
-        if($save){
-            if(!empty($this->request->getPost('id')))
-            $this->session->setFlashdata('success_message','Data has been updated successfully') ;
-            else
-            $this->session->setFlashdata('success_message','Data has been added successfully') ;
-            $id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
-            return redirect()->to('/main/view_details/'.$id);
-        }else{
-            echo view('templates/header', $this->data);
-            echo view('crud/create', $this->data);
-            echo view('templates/footer');
-        }
-    }*/
+        //if(!empty($this->request->getPost('id')))
+          //  $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
+        //else
+        $save = $this->crud_invest->insert($post);
+        //if($save){
+          //  if(!empty($this->request->getPost('id')))
+            //$this->session->setFlashdata('success_message','Data has been updated successfully') ;
+            //else
+            //$this->session->setFlashdata('success_message','Data has been added successfully') ;
+            //$id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
+            return redirect()->to(site_url('/investigadorescontroller/list'));
+        //}else{
+        //    echo view('templates/header', $this->data);
+        //    echo view('crud/create', $this->data);
+        //    echo view('templates/footer');
+        //}
+    }
 
    
-
+/*
     // Edit Form Page
     /*public function edit($id=''){
         if(empty($id)){
@@ -90,21 +88,21 @@ class InvestigadoresController extends BaseController{
         echo view('templates/header', $this->data);
         echo view('crud/edit', $this->data);
         echo view('templates/footer');
-    }
+    }*/
 
     // Delete Data
-    public function delete($id=''){
-        if(empty($id)){
-            $this->session->setFlashdata('error_message','Unknown Data ID.') ;
-            return redirect()->to('/main/list');
-        }
-        $delete = $this->crud_model->delete($id);
-        if($delete){
-            $this->session->setFlashdata('success_message','Contact Details has been deleted successfully.') ;
-            return redirect()->to('/main/list');
-        }
-    }
+    public function del(){
+        $this->data['request']= $this->request;
+        
+        $dni = $this->request->getPost('dni');
 
+        $res = $this->crud_invest->where('DNI',$dni)->delete();
+        echo 'Estoy dentro';
+
+        echo $dni;
+        return redirect()->to(site_url('/investigadorescontroller/list'));
+    }
+    /*
     // View Data
     public function view_details($id=''){
         if(empty($id)){

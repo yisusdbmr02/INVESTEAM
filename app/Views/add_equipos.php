@@ -1,20 +1,12 @@
 <br>
 <div class="row d-flex justify-content-center">
    
-<form action="" class="w-50 border rounded bg-warning text-center p-3" method="post">
+<form action="<?=base_url()?>index.php/equiposcontroller/save" class="w-50 border rounded bg-warning text-center p-3" method="post">
 <h1><?=$page_title?></h1>
 <div class="row my-2">
     <div class="col">
         <label for="ideq">IdEquipo:</label>
-        <select name="ideq" id="ideq">
-        <option value="">Todos los Equipos</option>
-            <?php
-            if(count($lista_equipos) > 0){
-            foreach($lista_equipos as $row): ?> 
-            <option value="<?=$row->IdEquipo?>"><?=$row->IdEquipo?></option>
-            <?php endforeach;
-            }?> 
-        </select>
+        <input type="text"  class="form-input" name="ideq" id="ideq">
     </div>
 </div>
 <div class="row my-2">

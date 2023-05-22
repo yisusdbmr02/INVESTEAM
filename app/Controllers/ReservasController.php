@@ -35,6 +35,7 @@ class ReservasController extends BaseController{
         echo view('listado_reservas', $this->data);
         echo view('estructure/footer');
     }
+    // Create Form Page
     public function add(){
         $this->data['page_title'] = "Añadir Reservas";
         $this->crud_eq= new CrudEquipos();
@@ -44,47 +45,35 @@ class ReservasController extends BaseController{
         echo view('add_reservas', $this->data);
         echo view('estructure/footer');
     }
-    // Create Form Page
-    /*public function create(){
-        $this->data['page_title'] = "Add New";
-        $this->data['request'] = $this->request;
-        echo view('templates/header', $this->data);
-        echo view('crud/create', $this->data);
-        echo view('templates/footer');
-    }
-
     // Insert And Update Function
     public function save(){
         $this->data['request'] = $this->request;
         $post = [
-            'firstname' => $this->request->getPost('firstname'),
-            'middlename' => $this->request->getPost('middlename'),
-            'lastname' => $this->request->getPost('lastname'),
-            'gender' => $this->request->getPost('gender'),
-            'contact' => $this->request->getPost('contact'),
-            'email' => $this->request->getPost('email'),
-            'address' => $this->request->getPost('address')
+            'IdEquipo' => $this->request->getPost('ideq'),
+            'DNI' => $this->request->getPost('dni'),
+            'FechaInicio' => $this->request->getPost('fechaIni'),
+            'FechaFin' => $this->request->getPost('fechaFin'),
         ];
-        if(!empty($this->request->getPost('id')))
-            $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
-        else
-            $save = $this->crud_model->insert($post);
-        if($save){
-            if(!empty($this->request->getPost('id')))
-            $this->session->setFlashdata('success_message','Data has been updated successfully') ;
-            else
-            $this->session->setFlashdata('success_message','Data has been added successfully') ;
-            $id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
-            return redirect()->to('/main/view_details/'.$id);
-        }else{
-            echo view('templates/header', $this->data);
-            echo view('crud/create', $this->data);
-            echo view('templates/footer');
-        }
-    }*/
+        //if(!empty($this->request->getPost('id')))
+          //  $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
+        //else
+        $save = $this->crud_res->insert($post);
+        //if($save){
+          //  if(!empty($this->request->getPost('id')))
+            //$this->session->setFlashdata('success_message','Data has been updated successfully') ;
+            //else
+            //$this->session->setFlashdata('success_message','Data has been added successfully') ;
+            //$id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
+            return redirect()->to(site_url('/reservascontroller/list'));
+        //}else{
+        //    echo view('templates/header', $this->data);
+        //    echo view('crud/create', $this->data);
+        //    echo view('templates/footer');
+        //}
+    }
 
    
-
+/*
     // Edit Form Page
     /*public function edit($id=''){
         if(empty($id)){

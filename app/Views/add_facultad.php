@@ -1,7 +1,7 @@
 <br>
 <div class="row d-flex justify-content-center">
    
-<form action="" class="w-50 border rounded bg-warning text-center p-3" method="post">
+<form action="<?=base_url()?>index.php/facultadcontroller/save" class="w-50 border rounded bg-warning text-center p-3" method="post">
 <h1><?=$page_title?></h1>
 <div class="row my-2">
 <div class="col">

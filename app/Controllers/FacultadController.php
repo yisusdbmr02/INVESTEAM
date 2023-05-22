@@ -34,50 +34,37 @@ class FacultadController extends BaseController{
         echo view('listado_facultad', $this->data);
         echo view('estructure/footer');
     }
+     // Create Form Page
     public function add(){
         $this->data['page_title'] = "Añadir Facultad";
         echo view('estructure/header', $this->data);
         echo view('add_facultad', $this->data);
         echo view('estructure/footer');
     }
-    // Create Form Page
-    /*public function create(){
-        $this->data['page_title'] = "Add New";
-        $this->data['request'] = $this->request;
-        echo view('templates/header', $this->data);
-        echo view('crud/create', $this->data);
-        echo view('templates/footer');
-    }
 
     // Insert And Update Function
     public function save(){
         $this->data['request'] = $this->request;
         $post = [
-            'firstname' => $this->request->getPost('firstname'),
-            'middlename' => $this->request->getPost('middlename'),
-            'lastname' => $this->request->getPost('lastname'),
-            'gender' => $this->request->getPost('gender'),
-            'contact' => $this->request->getPost('contact'),
-            'email' => $this->request->getPost('email'),
-            'address' => $this->request->getPost('address')
+            'NomFacultad' => $this->request->getPost('nombre'),
         ];
-        if(!empty($this->request->getPost('id')))
-            $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
-        else
-            $save = $this->crud_model->insert($post);
-        if($save){
-            if(!empty($this->request->getPost('id')))
-            $this->session->setFlashdata('success_message','Data has been updated successfully') ;
-            else
-            $this->session->setFlashdata('success_message','Data has been added successfully') ;
-            $id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
-            return redirect()->to('/main/view_details/'.$id);
-        }else{
-            echo view('templates/header', $this->data);
-            echo view('crud/create', $this->data);
-            echo view('templates/footer');
-        }
-    }*/
+        //if(!empty($this->request->getPost('id')))
+          //  $save = $this->crud_model->where(['id'=>$this->request->getPost('id')])->set($post)->update();
+        //else
+        $save = $this->crud_facu->insert($post);
+        //if($save){
+          //  if(!empty($this->request->getPost('id')))
+            //$this->session->setFlashdata('success_message','Data has been updated successfully') ;
+            //else
+            //$this->session->setFlashdata('success_message','Data has been added successfully') ;
+            //$id =!empty($this->request->getPost('id')) ? $this->request->getPost('id') : $save;
+            return redirect()->to(site_url('/facultadcontroller/list'));
+        //}else{
+        //    echo view('templates/header', $this->data);
+        //    echo view('crud/create', $this->data);
+        //    echo view('templates/footer');
+        //}
+    }
 
    
 
