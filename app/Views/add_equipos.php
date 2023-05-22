@@ -6,7 +6,7 @@
 <div class="row my-2">
     <div class="col">
         <label for="ideq">IdEquipo:</label>
-        <input type="text" disabled class="form-input" required name="ideq" id="ideq">
+        <input type="text" class="form-input" required name="ideq" id="ideq">
     </div>
 </div>
 <div class="row my-2">

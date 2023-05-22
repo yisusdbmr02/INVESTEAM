@@ -6,7 +6,7 @@
 <div class="row my-2">
     <div class="col">
         <label for="dni">DNI:</label>
-        <input type="text" class="form-input" disabled value="<?=$invest['DNI']?>" name="dni" id="dniInvest">
+        <input type="text" class="form-input" readonly value="<?=$invest['DNI']?>" name="dni" id="dniInvest">
     </div>
 </div>
 <div class="row my-2">

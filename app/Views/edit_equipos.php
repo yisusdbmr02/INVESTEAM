@@ -6,13 +6,13 @@
 <div class="row my-2">
     <div class="col">
         <label for="ideq">IdEquipo:</label>
-        <input type="text" disabled class="form-input" requiered name="ideq" id="ideq">
+        <input type="text" readonly class="form-input" value="<?=$equipo['IdEquipo']?>" required name="idequipo" id="ideq">
     </div>
 </div>
 <div class="row my-2">
 <div class="col">
         <label for="descripcion">Descripcion:</label>
-        <input type="text" class="form-input" value="<?=$equipo['Descripcion']?>" requiered name="descripcion" id="nombreInvest">
+        <input type="text" class="form-input" value="<?=$equipo['Descripcion']?>" required name="descripcion" id="nombreInvest">
     </div>
 </div>
 <div class="row my-2">

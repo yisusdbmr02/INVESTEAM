@@ -76,15 +76,16 @@ public function edit($id=''){
 // UPT Form Page
 public function upt(){
     $this->data['request'] = $this->request;
-    $idEquipo = $this->request->getPost('ideq');
+    $idEquipo = $this->request->getPost('idequipo');
+    
     $post = [
         'Descripcion' => $this->request->getPost('descripcion'),
-        'IdFacultad' => $this->request->getPost('facu'),
+        'Idfacultad' => $this->request->getPost('facu'),
     ];
-   
+  
     $save = $this->crud_eq->where('IdEquipo',$idEquipo)->set($post)->update();
     
-        return redirect()->to(site_url('/equiposcontroller/list'));
+   return redirect()->to(site_url('/equiposcontroller/list'));
     
 }
 public function del(){

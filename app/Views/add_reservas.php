@@ -6,7 +6,7 @@
 <div class="row my-2">
     <div class="col">
         <label for="dni">DNI:</label>
-        <select name="ideq" required id="ideq">
+        <select name="dni" required id="dni">
         <option value="">Todos los Investigadores</option>
         <?php if(count($lista_invest) > 0){
             foreach($lista_invest as $row): ?> 
