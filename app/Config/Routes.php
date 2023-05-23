@@ -33,6 +33,9 @@ $routes->set404Override();
 $routes->get('/', 'InicioController::index');
 $routes->get('/iniciocontroller', 'InicioController::index');
 
+$routes->get('/aboutuscontroller', 'AboutUsController::index');
+
+
 $routes->get('/investigadorescontroller', 'InvestigadoresController::index');
 $routes->post('/investigadorescontroller', 'InvestigadoresController::index');
 

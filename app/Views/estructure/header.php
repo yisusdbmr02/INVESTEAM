@@ -59,7 +59,7 @@
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="<?=site_url()?>/aboutuscontroller">About Us</a>
                     </li>
                  
                 </ul>
