@@ -43,7 +43,7 @@ class InvestigadoresController extends BaseController{
         $this->data['lista_facultades'] = $this->crud_facu->orderBy('NomFacultad ASC')->select('*')->get()->getResult();
         $this->data['request'] = $this->request;
         echo view('estructure/header', $this->data);
-        echo view('add_investigadores', $this->data);
+        echo view('addinves', $this->data);
         echo view('estructure/footer');
     }
     // UPT Form Page
