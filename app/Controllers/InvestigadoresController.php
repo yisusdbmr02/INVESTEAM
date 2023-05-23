@@ -18,6 +18,7 @@ class InvestigadoresController extends BaseController{
         $this->crud_invest = new CrudInvestigadores();
         $this->session = \Config\Services::session();
         $this->data['session'] = $this->session;
+        helper(‘form’);
     }
 
     // Home Page

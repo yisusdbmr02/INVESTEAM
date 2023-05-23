@@ -93,3 +93,213 @@ INFO - 2023-05-23 10:32:09 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-05-23 10:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-23 10:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-23 10:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 11:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 11:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 11:55:14 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 11:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 11:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 11:55:15 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 11:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 11:55:15 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 11:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 11:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 11:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 11:55:26 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:00:03 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:00:04 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:00:05 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:00:05 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:00:08 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:00:08 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 12:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 12:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 12:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 12:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 12:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-23 12:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:00:57 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:01:34 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:01:35 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:01:35 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:01:36 --> Call to undefined function form_open()
+in APPPATH\Views\addInves.php on line 3.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('addInves', [], true)
+ 4 APPPATH\Controllers\InvestigadoresController.php(46): view('addInves', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\InvestigadoresController->add()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InvestigadoresController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:02:18 --> Undefined constant "App\Controllers\‘form’"
+in APPPATH\Controllers\InvestigadoresController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\InvestigadoresController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:02:19 --> Undefined constant "App\Controllers\‘form’"
+in APPPATH\Controllers\InvestigadoresController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\InvestigadoresController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:02:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:02:19 --> Undefined constant "App\Controllers\‘form’"
+in APPPATH\Controllers\InvestigadoresController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\InvestigadoresController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:02:21 --> Undefined constant "App\Controllers\‘form’"
+in APPPATH\Controllers\InvestigadoresController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\InvestigadoresController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-23 12:02:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-23 12:02:31 --> Undefined constant "App\Controllers\‘form’"
+in APPPATH\Controllers\InvestigadoresController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\InvestigadoresController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
