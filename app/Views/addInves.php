@@ -1,6 +1,6 @@
 <div class="container">
 <?php
-echo form_open('/investigadorescontroller/add');
+echo form_open('/InvestigadoresController/add');
 if(isset($list)){
     $dni=$list[0]['DNI'];
     $nombre=$list[0]['NomInvestigador'];
