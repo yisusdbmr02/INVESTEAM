@@ -82,7 +82,7 @@ public function upt(){
     public function del(){
         
         $request = \Config\Services::request();
-        $idfacu = $request->getPostGet('idFacultad');
+        $idfacu = $request->getPostGet('IdFacultad');
         $this->crud_facu->delete($idfacu);
         return redirect()->to(site_url('/facultadcontroller/list'));
         } 
