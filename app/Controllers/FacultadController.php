@@ -1,8 +1,6 @@
 <?php
 namespace App\Controllers;
-
 use App\Models\CrudFacultad;
-
 class FacultadController extends BaseController{
     // Session
     protected $session;
@@ -10,14 +8,12 @@ class FacultadController extends BaseController{
     protected $data;
     // Model
     protected $crud_facu;
-
     // Initialize Objects
     public function __construct(){
         $this->crud_facu = new CrudFacultad();
         $this->session = \Config\Services::session();
         $this->data['session'] = $this->session;
     }
-
     // Home Page
     public function index(){
         $this->data['page_title'] = "Home Page";
@@ -25,7 +21,6 @@ class FacultadController extends BaseController{
         echo view('listado_facultad', $this->data);
         echo view('estructure/footer');
     }
-
     // List Page
     public function list(){
         $this->data['page_title'] = "Lista Facultades";
@@ -48,12 +43,9 @@ public function upt(){
     $post = [
         'NomFacultad' => $this->request->getPost('nombre')
     ];
-    
-   
-    $save = $this->crud_facu->where('IdFacultad',$id)->set($post)->update();
-   
+    $save = $this->crud_facu->where('IdFacultad',$id)->set($post)->update();   
     return redirect()->to(site_url('/facultadcontroller/list'));
-   
+
 }
     // Insert Function
     public function save(){
@@ -61,13 +53,9 @@ public function upt(){
         $post = [
             'NomFacultad' => $this->request->getPost('nombre'),
         ];
-     
         $save = $this->crud_facu->insert($post);
-   
             return redirect()->to(site_url('/facultadcontroller/list'));
-    
     }
-
      // Edit Form Page
      public function edit($id=''){
         $this->data['page_title'] = "Editar Facultad";
@@ -80,11 +68,9 @@ public function upt(){
         echo view('estructure/footer');
     }
     public function del(){
-        
         $request = \Config\Services::request();
         $idfacu = $request->getPostGet('IdFacultad');
         $this->crud_facu->delete($idfacu);
         return redirect()->to(site_url('/facultadcontroller/list'));
         } 
-    
 }

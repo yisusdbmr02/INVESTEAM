@@ -64,16 +64,14 @@ class ReservasController extends BaseController{
     public function upt(){
         $this->data['request'] = $this->request;
         $idres = $this->request->getPost('idres');
-        echo $idres;
         $post = [
             'DNI' => $this->request->getPost('dni'),
             'IdEquipo' => $this->request->getPost('ideq'),
             'FechaInicio' => $this->request->getPost('fechaIni'),
             'FechaFin' => $this->request->getPost('fechaFin')
         ];
-        print_r($post);
         $save = $this->crud_res->where('IdReserva',$idres)->set($post)->update();
-            //return redirect()->to(site_url('/reservascontroller/list'));
+            return redirect()->to(site_url('/reservascontroller/list'));
     }
 
     public function edit($id=''){

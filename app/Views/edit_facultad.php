@@ -6,7 +6,6 @@
 <div class="row my-2">
 <div class="col">
         <label for="nombre">Nombre:</label>
-        
         <input type="hidden" name='id' value="<?=$facultad['IdFacultad']?>">
         <input type="text" value="<?=$facultad['NomFacultad']?>" class="form-input" name="nombre" id="nombreInvest">
     </div>
