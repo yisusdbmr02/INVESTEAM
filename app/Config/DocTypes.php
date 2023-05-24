@@ -39,5 +39,5 @@ class DocTypes
      *    `true` - to be HTML5 compatible
      *    `false` - to be XHTML compatible
      */
-    public bool $html5 = true;
+    public bool $html5 = false;
 }
