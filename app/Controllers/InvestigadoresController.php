@@ -5,6 +5,7 @@ use App\Models\CrudInvestigadores;
 use App\Models\CrudFacultad;
 use App\Config\Security;
 
+
 class InvestigadoresController extends BaseController{
     // Session
     protected $session;
@@ -15,10 +16,13 @@ class InvestigadoresController extends BaseController{
 
     // Initialize Objects
     public function __construct(){
+        
         $this->crud_invest = new CrudInvestigadores();
         $this->session = \Config\Services::session();
         $this->data['session'] = $this->session;
-        helper(‘form’);
+        helper('form');
+        helper('language');
+        //this->config->set('language', 'ingles');
     }
 
     // Home Page
@@ -39,10 +43,11 @@ class InvestigadoresController extends BaseController{
     }
     // Create Form Page
     public function add(){
+             
         $this->data['page_title'] = "Añadir Investigadores";
         $this->crud_facu= new CrudFacultad();
         $this->data['lista_facultades'] = $this->crud_facu->orderBy('NomFacultad ASC')->select('*')->get()->getResult();
-        $this->data['request'] = $this->request;
+         $this->data['request'] = $this->request;
         echo view('estructure/header', $this->data);
         echo view('addInves', $this->data);
         echo view('estructure/footer');
@@ -70,7 +75,7 @@ class InvestigadoresController extends BaseController{
             'DNI' => $this->request->getPost('dni'),
             'NomInvestigador' => $this->request->getPost('nombre'),
             'ApellInvestigador' => $this->request->getPost('apellidos'),
-            'IdFacultad' => $this->request->getPost('facu'),
+            'IdFacultad' => $this->request->getPost('facultad'),
         ];
        
         $save = $this->crud_invest->insert($post);
