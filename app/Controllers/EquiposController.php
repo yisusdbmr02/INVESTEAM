@@ -89,11 +89,9 @@ public function upt(){
     
 }
 public function del(){
-        
     $request = \Config\Services::request();
     $idequipo = $request->getPostGet('IdEquipo');
     $this->crud_eq->delete($idequipo);
-  
     return redirect()->to(site_url('/equiposcontroller/list'));
 }
 }
